@@ -1,9 +1,9 @@
 # Microplastic_detection
 
-# AIM:
+## AIM:
 To Microplastic detection using detectron v2 model for qualitative analysis of oceanic water on the southern coastline of India .
 
-# ALGORITHM:
+## ALGORITHM:
 Step 1: Detect microplastics in oceanic water samples along India's southern coastline.
 
 Step 2: Collect and annotate images, split into training, validation, and test sets.
@@ -22,7 +22,7 @@ Step 7: Deploy Model by Saving and integrating into an inference system.
 
 Step 8: Report findings and provide visualization.
 
-# PROGRAM:
+## PROGRAM:
 ```
 import torch, detectron2
 !nvcc --version
@@ -203,9 +203,9 @@ evaluator = COCOEvaluator("Microplastic-Dataset-valid", False, output_dir="/kagg
 val_loader = build_detection_test_loader(cfg, "Microplastic-Dataset-valid")
 print(inference_on_dataset(trainer.model, val_loader, evaluator))
 ```
-OUTPUT:
-Input Image:
-Output Image:
-image
+## OUTPUT:
+### Input Image:
+### Output Image:
 
-RESULT:
+
+## RESULT:
