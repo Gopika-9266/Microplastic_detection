@@ -1,7 +1,7 @@
 # Microplastic_detection
 
 ## AIM:
-To Microplastic detection using detectron v2 model for qualitative analysis of oceanic water on the southern coastline of India .
+Microplastic detection using the Detectron2 model for qualitative analysis of oceanic water along India's southern coastline.
 
 ## ALGORITHM:
 Step 1: Detect microplastics in oceanic water samples along India's southern coastline.
