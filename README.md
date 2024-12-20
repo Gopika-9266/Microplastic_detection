@@ -218,7 +218,14 @@ print(inference_on_dataset(trainer.model, val_loader, evaluator))
 
 
 ## RESULT:
- The microplastic detection system developed using the Detectron2 framework demonstrates robust performance, achieving an accuracy of 90%, precision of 93%, and recall of 92%. These metrics indicate the model's 
-ability to effectively identify microplastics in oceanic water samples with high reliability and minimal false positives. The system's efficiency in both prediction accuracy and processing time highlights its 
-suitability for real-world ecological monitoring applications. By automating microplastic detection, this approach provides a scalable solution for addressing marine pollution, supporting sustainable 
-environmental practices and advancing research in marine conservation.
+```
+• Machine learning
+– Accuracy: 90%
+– Precision: 93%
+– Recall: 92%
+Inferences: Effective predictions,Time efficiency.
+```
+     The microplastic detection system developed using the Detectron2 framework demonstrates robust performance, achieving an accuracy of 90%, precision of 93%, and recall of 92%. These metrics indicate the 
+model's ability to effectively identify microplastics in oceanic water samples with high reliability and minimal false positives. The system's efficiency in both prediction accuracy and processing time 
+highlights its suitability for real-world ecological monitoring applications. By automating microplastic detection, this approach provides a scalable solution for addressing marine pollution, 
+supporting sustainable environmental practices and advancing research in marine conservation.
