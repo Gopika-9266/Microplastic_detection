@@ -1,104 +1,275 @@
+
 # 🌊 Microplastic Detection using Detectron2 for Oceanic Monitoring
 
-## 🎯 Objective
-
-To design and implement a deep learning-based pipeline using **Detectron2** for **automated detection of microplastics** in oceanic water samples collected along the **southern coastline of India**. The goal is to assist environmental monitoring agencies and marine researchers by providing a scalable, AI-powered solution for real-time and accurate microplastic detection.
+An AI-powered deep learning system that automatically detects and segments microplastics in microscopic water sample images using Detectron2, enabling faster and more accurate marine pollution monitoring.**
 
 ---
 
-## 🔍 Project Motivation
+# 📌 Overview
 
-Microplastics—tiny plastic particles less than 5mm in size—have infiltrated global marine ecosystems, threatening biodiversity and entering human food chains. Traditional detection methods are **manual, time-consuming**, and **labor-intensive**. By harnessing the capabilities of **instance segmentation and object detection models**, we propose a smarter, **automated alternative** using **Detectron2**.
+Microplastics are tiny plastic particles (less than 5 mm in size) that have become one of the most serious threats to marine ecosystems. Traditional methods of detecting microplastics involve manual microscopic examination, which is time-consuming, labor-intensive, and prone to human error.
 
----
-
-## 📊 Algorithmic Pipeline
-
-> A step-by-step breakdown of our AI-driven detection system:
-
-### Step 1: Data Acquisition
-- Collect water samples from coastal regions of Tamil Nadu and Kerala.
-- Use microscopy to capture high-resolution images of filtered microplastic residues.
-
-### Step 2: Data Annotation
-- Annotate microplastic particles in each image using Roboflow's labeling interface.
-- Export datasets in COCO format, divided into **train**, **validation**, and **test** sets.
-
-### Step 3: Environment & Library Setup
-- Install **Detectron2**, PyTorch, CUDA, and other dependencies.
-- Configure system paths and environment for GPU acceleration.
-
-### Step 4: Model Configuration
-- Load pre-trained **Mask R-CNN** or **Faster R-CNN** model from Detectron2’s model zoo.
-- Fine-tune hyperparameters like learning rate, batch size, number of iterations.
-
-### Step 5: Data Augmentation
-- Apply transformations: horizontal/vertical flips, Gaussian noise, contrast adjustment.
-- Enhances generalization and robustness of the model across diverse oceanic imagery.
-
-### Step 6: Model Training
-- Train the model on annotated microplastic datasets.
-- Use checkpointing and periodic evaluation for model optimization.
-
-### Step 7: Performance Evaluation
-- Evaluate using **mean Average Precision (mAP@50:70)** and other key metrics:
-  - **Accuracy**: 90%
-  - **Precision**: 93%
-  - **Recall**: 92%
-
-### Step 8: Deployment & Visualization
-- Export the trained model (`model_final.pth`) for integration.
-- Visualize predictions via matplotlib and Detectron2's visualizer.
-- Build inference-ready pipeline for real-world deployment.
+The **Microplastic Detection using Detectron2** project leverages **Instance Segmentation** and **Object Detection** techniques to automatically identify microplastic particles from microscopic images of ocean water samples. Built using **Detectron2** and **Mask R-CNN**, the system provides accurate detection results, helping researchers and environmental agencies monitor marine pollution more efficiently.
 
 ---
 
-## 💡 Sample Output
+# 🎯 Objectives
 
-### 🖼️ Input Image:
+- Detect microplastics automatically from microscopic images.
+- Reduce manual inspection time.
+- Improve detection accuracy using Deep Learning.
+- Assist researchers in marine pollution analysis.
+- Provide an efficient and scalable monitoring solution.
+
+---
+
+# ✨ Features
+
+- 🔬 Automatic Microplastic Detection
+- 🤖 Detectron2-based Deep Learning Model
+- 🎯 Instance Segmentation using Mask R-CNN
+- 📷 High-Resolution Image Processing
+- 📊 Performance Evaluation Metrics
+- ⚡ Fast Inference
+- 🌊 Supports Ocean Water Sample Analysis
+- 📈 Accurate Detection Visualization
+
+---
+
+# 🛠️ Technologies Used
+
+| Technology | Purpose |
+|------------|---------|
+| Python | Programming Language |
+| Detectron2 | Object Detection Framework |
+| PyTorch | Deep Learning Framework |
+| OpenCV | Image Processing |
+| NumPy | Numerical Operations |
+| Matplotlib | Visualization |
+| Roboflow | Dataset Annotation |
+| COCO Dataset Format | Dataset Organization |
+| CUDA | GPU Acceleration |
+
+---
+
+# 🔄 System Workflow
+
+```text
+Water Sample Collection
+          │
+          ▼
+Microscopic Image Acquisition
+          │
+          ▼
+Image Annotation (Roboflow)
+          │
+          ▼
+Dataset Preparation (COCO Format)
+          │
+          ▼
+Image Preprocessing & Augmentation
+          │
+          ▼
+Model Configuration (Detectron2)
+          │
+          ▼
+Model Training (Mask R-CNN)
+          │
+          ▼
+Microplastic Detection
+          │
+          ▼
+Performance Evaluation
+          │
+          ▼
+Prediction Visualization
+```
+
+---
+
+# 📸 Project Screenshots
+
+## 📷 Input Microscopic Image
+
 ![Input](https://github.com/user-attachments/assets/fd321014-be1f-4091-86b7-6e5369c7c8cb)
 
-### 🔬 Microplastic Detection:
+
+---
+
+## 🔬 Detected Microplastics
+
 ![Detected Microplastics](https://github.com/user-attachments/assets/7e8fca85-3511-4224-9b32-28350cae919d)
 
-### 📌 Final Output:
+---
+
+## 📊 Final Prediction
+
 ![Final Prediction](https://github.com/user-attachments/assets/a10f864e-be67-45de-8daa-af54b9dbd379)
 
 ---
 
-## 📈 Performance Summary
-• Accuracy : 90%
+# ⚙️ Installation
 
-• Precision : 93%
+## Clone the Repository
 
-• Recall : 92%
+```bash
+git clone https://github.com/your-username/Microplastic-Detection-Detectron2.git
 
-• Inference Time : ~40 ms/image (GPU)
-
-
-- **High precision** ensures low false-positive detection.
-- **Strong recall** highlights model’s ability to capture most microplastic instances.
+cd Microplastic-Detection-Detectron2
+```
 
 ---
 
-## 🧠 Inferences & Future Scope
+## Install Required Libraries
 
-The developed microplastic detection framework exhibits **remarkable detection reliability** and is capable of supporting **automated marine pollution analysis**. Its strengths lie in:
-
-- **Scalability** for long-term ecological monitoring.
-- **Speed and accuracy** outperforming traditional visual/manual methods.
-- **Real-time deployability** on marine drones, underwater ROVs, or edge devices.
-
-### 🔭 Future Enhancements
-
-- Integrate real-time drone imaging and edge computing.
-- Expand to **multi-modal datasets** including hyperspectral imagery.
-- Extend the model to identify microplastic **types and densities**.
+```bash
+pip install -r requirements.txt
+```
 
 ---
 
-## 🌐 Impact Statement
+## Install Detectron2
 
-This project is a critical step toward **AI-powered marine sustainability**. By automating microplastic detection, we contribute a **scalable, reproducible, and efficient** methodology for mitigating marine plastic pollution, supporting the **United Nations SDG 14 – Life Below Water**.
+```bash
+pip install detectron2
+```
 
+---
 
+## Run the Detection Script
+
+```bash
+python detect.py
+```
+
+---
+
+## Train the Model
+
+```bash
+python train.py
+```
+
+---
+
+# 🚀 How It Works
+
+### Step 1
+
+Collect ocean water samples from coastal regions.
+
+---
+
+### Step 2
+
+Capture microscopic images of filtered water samples.
+
+---
+
+### Step 3
+
+Annotate microplastic particles using Roboflow.
+
+---
+
+### Step 4
+
+Convert the annotated dataset into COCO format.
+
+---
+
+### Step 5
+
+Configure the Detectron2 model using a pre-trained Mask R-CNN architecture.
+
+---
+
+### Step 6
+
+Train the model using the annotated dataset.
+
+---
+
+### Step 7
+
+Provide a microscopic image as input.
+
+---
+
+### Step 8
+
+The trained model detects and segments the microplastic particles.
+
+---
+
+### Step 9
+
+The final prediction image with segmentation masks and bounding boxes is displayed.
+
+---
+
+# 📊 Performance Metrics
+
+| Metric | Value |
+|---------|--------|
+| Accuracy | **90%** |
+| Precision | **93%** |
+| Recall | **92%** |
+| Inference Time | **~40 ms/Image (GPU)** |
+
+---
+
+# 📈 Results
+
+The proposed model successfully detects microplastic particles from microscopic images with high accuracy.
+
+### Key Outcomes
+
+- ✅ Automated Microplastic Detection
+- ✅ Accurate Instance Segmentation
+- ✅ Faster Analysis Compared to Manual Methods
+- ✅ Reliable Detection Performance
+- ✅ Supports Marine Pollution Monitoring
+
+---
+
+# 🌍 Applications
+
+- Marine Pollution Monitoring
+- Environmental Research
+- Ocean Conservation Studies
+- Water Quality Assessment
+- Coastal Ecosystem Analysis
+- Academic Research
+- Smart Environmental Monitoring Systems
+
+---
+
+# 💡 Advantages
+
+- Reduces manual inspection effort.
+- High detection accuracy.
+- Fast inference speed.
+- Supports large-scale environmental monitoring.
+- Scalable for future deployments.
+- Improves consistency in microplastic analysis.
+
+---
+
+# 🔮 Future Enhancements
+
+- 🚁 Drone-based real-time marine monitoring.
+- 🌊 Underwater robotic deployment.
+- ☁️ Cloud-based detection platform.
+- 📱 Mobile application support.
+- 🧬 Classification of different microplastic types.
+- 📊 Automatic density estimation and pollution mapping.
+- 🤖 Integration with IoT-enabled environmental monitoring systems.
+
+---
+
+# 🌱 Environmental Impact
+
+This project contributes to sustainable marine ecosystem monitoring by providing an automated solution for identifying microplastic pollution.
+
+The developed system supports environmental researchers and conservation agencies in making faster and more informed decisions, contributing towards **United Nations Sustainable Development Goal (SDG) 14 – Life Below Water**.
