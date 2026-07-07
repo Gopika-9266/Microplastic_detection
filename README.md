@@ -1,6 +1,5 @@
 
-# 🌊 Microplastic Detection using Detectron2 for Oceanic Monitoring
-
+# 🌊 Microplastic Detection using Detectron2 
 An AI-powered deep learning system that automatically detects and segments microplastics in microscopic water sample images using Detectron2, enabling faster and more accurate marine pollution monitoring.**
 
 ---
